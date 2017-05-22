@@ -1,0 +1,48 @@
+//- universe.jade
+
+extends ./layout.pug
+
+block title
+  title Вселенные | Тайный город
+
+block link
+  link(
+    rel="stylesheet" 
+    type="text/css" 
+    href="css/universe.css")
+
+block content
+  #universe_info
+    .universe_header
+      .universe_cover
+        img(
+          src="images/universe_cover.jpg"
+          title="universe_cover"
+          alt="universe_cover")
+      .universe_cover_shadow
+      .universe_page_title
+        h1 Вселенные
+      .universe_logo
+        img(
+          src="images/universe_logo.png"
+          title="universe_logo"
+          alt="universe_logo")
+    .content
+      .column
+        .universe_info
+          .universe_main_info
+            .universe_title 
+              h2 Тайный город
+            .universe_subtitle Secret City
+            .universe_description 
+              p.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, est sint veritatis minima, odio quos dolorem ipsam facilis repellendus harum nesciunt reprehenderit debitis perferendis. Voluptatem perferendis consequatur quod culpa neque.
+                Quod, doloremque, alias rem excepturi vitae culpa ullam necessitatibus quae unde praesentium minima sequi quam, fuga ut blanditiis id officiis, impedit veniam qui. Dolores sapiente asperiores quia, officiis tempore ad.
+                Cum at nam vero consequuntur dolor, commodi dolore debitis magni molestiae fugiat suscipit explicabo ex labore ipsam, necessitatibus officiis nesciunt earum maxime placeat ea, tenetur culpa ullam. Accusantium, aperiam enim.
+                Nisi nihil, neque ea doloribus accusantium culpa, tenetur illo itaque harum iure in necessitatibus expedita distinctio ab a accusamus iusto saepe repudiandae! Soluta nam illo sunt sit enim consequuntur in!
+          .universe_data
+            .universe_logo
+            .universe_addition
+              p Год создания: 1999
+              p Год создания: 1999
+            .universe_subscription_button Подписаться

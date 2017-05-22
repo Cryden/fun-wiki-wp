@@ -1,0 +1,226 @@
+/* <header> styles */
+
+header
+	.main_nav_close_button
+		width: 30px
+		height: 30px
+		position: fixed
+		left: 280px
+		top: 10px
+		color: $color-second
+		z-index: 8
+		display: none
+		.menu_button
+			padding: 5px
+			font-size: 30px
+
+	.mobile_nav
+		width: 100%
+		height: 60px
+		background: $color-base
+		position: fixed
+		top: 0
+		box-shadow: 0 2px 5px black
+		font-size: 10px
+		display: flex
+		z-index: 5
+		justify-content: space-between
+
+		.header_logo
+			margin: 13px
+			width: 116px
+			height: 30px
+			background: url("../images/logo.svg") no-repeat
+			background-size: contain
+
+		.main_nav_open_button
+			display: block
+			width: 60px
+			height: 60px
+			color: $color-main
+
+			.menu_button
+				padding: 19px
+				font-size: 22px
+				color: $color-main
+
+	.main_nav
+		z-index: 17
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		-ms-overflow-style: none
+		left: -390px
+		background: $color-base
+		position: fixed
+		top: 0
+		width: 320px
+		height: 100vh
+		margin: auto
+		box-shadow: -5px 0 20px 5px #1a1a1a
+
+		.header_logo
+			img
+				margin-left: 94px
+				margin-top: 30px
+				height: 30px
+			h1
+				width: 100%
+				text-align: center
+				font-size: 11px
+				font-weight: 300
+				margin-top: 8px
+
+	.main_nav::-webkit-scrollbar
+		display: none
+
+	.header_nav
+		margin-top: 40px
+		flex: 1
+
+	#cssmenu, #cssmenu ul, #cssmenu ul li
+		display: block
+		font-size: 13px
+		list-style: none outside none
+		margin: 0
+		padding: 0
+		position: relative
+		color: $color-main-light
+
+		a
+			text-decoration: none
+
+	a
+		color: $color-main-light
+		cursor: pointer
+		height: 30px
+		line-height: 30px
+		display: block
+
+	a:after
+		content: ""
+		display: block
+		height: 4px
+		position: absolute
+		right: 35px
+		top: 10px
+		-webkit-transform: rotate(-135deg)
+		-moz-transform: rotate(-135deg)
+		transform: rotate(-135deg)
+		width: 4px
+		z-index: 10
+
+	#cssmenu .open a>.holder:after
+		content: ""
+		display: block
+		height: 4px
+		position: absolute
+		right: 35px
+		-webkit-transform: rotate(135deg)
+		-moz-transform: rotate(135deg)
+		transform: rotate(45deg)
+		width: 4px
+		z-index: 10
+		border-left: 1px solid $color-second
+		border-top: 1px solid $color-second
+		top: 10px
+
+	#cssmenu
+		.active
+			font-weight: 400
+
+	#cssmenu ul ul
+		display: none
+
+	#cssmenu ul li>a
+		padding-left: 35px
+
+	#cssmenu ul ul li>a
+		padding-left: 50px
+
+	#cssmenu ul ul ul li>a
+		padding-left: 65px
+
+	#cssmenu ul ul ul ul li>a
+		padding-left: 80px
+
+	.holder
+		height: 0
+		position: absolute
+		right: 0
+		top: 0
+		width: 0
+
+	.holder:after
+		content: ""
+		display: block
+		height: 4px
+		position: absolute
+		right: 35px
+		-webkit-transform: rotate(-135deg)
+		-moz-transform: rotate(-135deg)
+		transform: rotate(-135deg)
+		width: 4px
+		z-index: 10
+		border-left: 1px solid $color-second
+		border-top: 1px solid $color-second
+		top: 10px
+
+	#cssmenu ul ul li.has-sub > a:after
+		border-left: 1px solid $color-second
+		border-top: 1px solid $color-second
+
+	#cssmenu a:hover
+		background: url("../images/left-menu-hover.png") repeat-y
+
+	.header_text
+		margin: 40px
+		margin-top: 60px
+		margin-bottom: 60px
+
+		h1
+			font-size: unit(160, pts, px)
+			font-weight: 300
+			color: $color-main
+
+		p
+			margin-top: 20px
+			font-size: unit(9, pts, px)
+			line-height: unit(14, pts, px)
+			color: $color-main
+			text-indent: 10px
+			text-align: justify
+
+@media (min-width: 375px)
+
+	header
+		.main_nav_close_button
+			left: 330px
+
+@media (min-width: 769px)
+
+	header
+		.mobile_nav
+			width: 70px
+			height: 100vh
+			box-shadow: 0 0 12px #1a1a1a
+			flex-direction: column
+			.header_logo
+				margin: 15px
+				width: 40px
+				height: 40px
+				background: url("../images/logo_md.png") no-repeat
+				background-size: contain
+			.main_nav_open_button
+				margin-left: 5px
+				margin-bottom: 10px
+
+@media (min-width: 1025px)
+
+	header
+		.mobile_nav
+			display: none
+		.main_nav
+			width: 300px
+			left: 60px!important
+			.main_nav_close_button
+				display: none!important
