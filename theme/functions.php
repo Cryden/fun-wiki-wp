@@ -14,7 +14,7 @@ require_once('libs/autoload.php');
 
 use Jade\Jade;
 $jade = new Jade();
-$jade_template = get_template_directory() . '/src/jade/';
+$jade_template = get_template_directory() . '/templates/';
 
 function output_buffer_contents($function, $args = array()){
   ob_start();

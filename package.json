@@ -1,0 +1,13 @@
+{
+  "name": "fun-wiki",
+  "version": "2.0.0",
+  "description": "wordpress theme",
+  "main": "index.js",
+  "author": "CRYDEsigN <Cryden_da@mail.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd development && yarn install && cd ../theme && composer install",
+ 	"dev": "cd development && gulp dev",
+ 	"build": "cd development && gulp build"
+  }
+}
