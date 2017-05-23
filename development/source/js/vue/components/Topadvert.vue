@@ -13,7 +13,7 @@ import $ from 'jquery'
 
 export default {
   name: 'topadvert',
-  data () {
+  data: function() {
     return {
       topadvert: ''
     }

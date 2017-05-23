@@ -2,8 +2,8 @@ var gulp = require('gulp');
 
 var sass = require('gulp-sass');
 
-var webpack = require('webpack-stream');
-
+var webpack = require('webpack');
+var gulpWebpack = require('gulp-webpack');
 
 gulp.task('sass', function(){
   return gulp.src('source/sass/*.sass')
@@ -23,7 +23,7 @@ gulp.task('pug', function() {
 
 gulp.task('webpack', function(){
   return gulp.src('source/js/main.js')
-    .pipe(webpack(require("./webpack.config.js")))
+    .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
     .pipe(gulp.dest('../theme/js'))
 });
 
