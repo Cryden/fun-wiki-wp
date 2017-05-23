@@ -28,9 +28,10 @@ gulp.task('webpack', function(){
 });
 
 gulp.task('dev', ['pug', 'sass', 'fonts', 'webpack'], function() {
-  console.log('development_mode');
-  //gulp.watch('src/sass/**/*.sass', ['dev:sass']);
-  //gulp.watch('src/jade/**/*.*', ['dev:jade']);
-  //gulp.watch('src/js/**/*.{js,vue}', ['dev:webpack']);
+  gulp.watch('source/sass/**/*.sass', ['sass']);
+  gulp.watch('source/jade/**/*.*', ['pug']);
+  gulp.watch('source/js/**/*.{js,vue}', ['webpack']);
   //gulp.watch('js/*.js', browserSync.reload);
 });
+
+gulp.task('default', ['dev']);

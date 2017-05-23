@@ -46,7 +46,7 @@ module.exports = {
 		}),
 		new UglifyJSPlugin({
 			compress: {
-				warnings: true
+				warnings: false
 			},
 			comments: false
 		})
