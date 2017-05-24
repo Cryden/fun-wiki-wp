@@ -5,70 +5,29 @@ include ../includes/mixins.pug
 doctype html
 html
   head
-    meta(
-      charset="utf-8")
-    meta(
-      name="viewport" 
-      content="width=device-width, initial-scale=1")
-    
     title=post_title
+    base(href=get_template_directory_uri().'/fun-wiki')
+    include layout_part/meta.pug
+    //style: include ../../css/header.css
 
-    meta(
-      name="keywords"
-      content=post_keywords)
-    meta(
-      name="description"
-      content=post_excerpt)
-    meta(
-      property="og:title" 
-      content=post_title)
-    meta(
-      property="og:type"
-      content="website")
-    meta(
-      property="og:description" 
-      content=post_excerpt)
-    meta(
-      property="og:image"
-      content=post_image_thumb)
-    meta(
-      property="og:url"
-      content=post_link)
-    meta(
-      property="og:locale"
-      content="ru_RU")
-    meta(
-      property="og:site_name"
-      content="Энциклопедия фантастических вселенных")
-
-    meta(
-      name='yandex-verification'
-      content='46d661f0fc6c27a5')
-    meta(
-      name='advmaker-verification' 
-      content='df1acbaa210da6f9c0c5808ee4229d64')
-
-    base(
-      href=get_template_directory_uri().'/fun-wiki')
-
-    style: include ../../css/header.css
-
-  body#app
+  body
     .shadow
-    include layout_part/header.pug
-    main
-      block content
-      include layout_part/content_footer.pug
+    app#app
+      header
+        //include layout_part/header.pug
+      main
+        block content
+        //include layout_part/content_footer.pug
+      footer
+        link(
+          rel="stylesheet" 
+          type="text/css"
+          href='css/dark.css'
+          id="theme_css")
+        link(
+          rel="stylesheet"
+          type="text/css"
+          href='css/components.css')
+        script(src='js/main.js' async)
 
-    link(
-      rel="stylesheet" 
-      type="text/css"
-      href='css/dark.css'
-      id="theme_css")
-    link(
-      rel="stylesheet" 
-      type="text/css" 
-      href='css/components.css')
-    script(src='js/main.js' async)
-
-    include layout_part/footer.pug
+        //include layout_part/footer.pug
