@@ -5,7 +5,8 @@ const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 
 const webpack = require('webpack');
-var gulpWebpack = require('webpack-stream');
+const gulpWebpack = require('webpack-stream');
+const named = require('vinyl-named');
 
 const browserSync = require('browser-sync');
 
@@ -29,7 +30,8 @@ gulp.task('pug', function() {
 });
 
 gulp.task('webpack', function(){
-  return gulp.src('source/js/main.js')
+  return gulp.src('source/js/*.js')
+    .pipe(named())
     .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
     .pipe(gulp.dest('../theme/js'))
 });

@@ -5368,7 +5368,7 @@ through2@^2.0.0, through2@~2.0.0:
     readable-stream "^2.1.5"
     xtend "~4.0.1"
 
-"through@>=2.3.4 <2.4.0-0", through@^2.3.8:
+"through@>=2.3.4 <2.4.0-0", through@^2.3.6, through@^2.3.8:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
@@ -5669,6 +5669,12 @@ vinyl-fs@^2.2.0:
     through2-filter "^2.0.0"
     vali-date "^1.0.0"
     vinyl "^1.0.0"
+
+vinyl-named@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vinyl-named/-/vinyl-named-1.1.0.tgz#94e4fe741e38db0ec303e5b3d868b297a2deab66"
+  dependencies:
+    through "^2.3.6"
 
 vinyl-sourcemaps-apply@^0.2.0:
   version "0.2.1"
