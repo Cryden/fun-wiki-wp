@@ -1,6 +1,6 @@
-/- layout.pug
+//- layout.pug
 
-include ./includes/mixins.pug
+include ../includes/mixins.pug
 
 doctype html
 html
@@ -51,14 +51,14 @@ html
     base(
       href=get_template_directory_uri().'/fun-wiki')
 
-    style: include ../css/header.css
+    style: include ../../css/header.css
 
-  body
+  body#app
     .shadow
-    include layout/header.pug
-    main#app
+    include layout_part/header.pug
+    main
       block content
-      include layout/content_footer.pug
+      include layout_part/content_footer.pug
 
     link(
       rel="stylesheet" 
@@ -71,4 +71,4 @@ html
       href='css/components.css')
     script(src='js/main.js' async)
 
-    include layout/footer.pug
+    include layout_part/footer.pug
