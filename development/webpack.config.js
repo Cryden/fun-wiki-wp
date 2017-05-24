@@ -3,12 +3,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-	entry: './source/js/main.js',
-	output: {
-		path: "/public/",
-		publicPath: "/public/",
-		filename: "app.js"
-	},
 	module: {
 		rules: [
 			{
