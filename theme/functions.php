@@ -12,8 +12,8 @@ require_once('libs/autoload.php');
 // Jade function
 //
 
-use Jade\Jade;
-$jade = new Jade();
+use Pug\Pug;
+$jade = new Pug();
 $jade_template = get_template_directory() . '/templates/';
 
 function output_buffer_contents($function, $args = array()){
