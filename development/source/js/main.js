@@ -11,10 +11,12 @@ import Vue from 'vue'
 
 import VueResource from 'vue-resource'
 import topadvert from './vue/components/Topadvert.vue'    
+import userprofile from './vue/components/Userprofile.vue'    
 
 Vue.use(VueResource)
 
 new Vue({
+  name: 'app',
   el: '#app',
-  components: { topadvert }
+  components: { [topadvert, userprofile] }
 })

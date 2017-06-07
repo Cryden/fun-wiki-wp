@@ -13,21 +13,20 @@ html
   body
     .shadow
     app#app
-      header
-        //include layout_part/header.pug
-      main
-        block content
-        //include layout_part/content_footer.pug
-      footer
-        link(
-          rel="stylesheet" 
-          type="text/css"
-          href='css/dark.css'
-          id="theme_css")
-        link(
-          rel="stylesheet"
-          type="text/css"
-          href='css/components.css')
-        script(src='js/main.js' async)
+    include layout_part/header.pug
+    main
+      block content
+      include layout_part/content_footer.pug
 
-        //include layout_part/footer.pug
+    link(
+      rel="stylesheet" 
+      type="text/css"
+      href='css/dark.css'
+      id="theme_css")
+    link(
+      rel="stylesheet" 
+      type="text/css" 
+      href='css/components.css')
+    script(src='js/main.js' async)
+
+    include layout_part/footer.pug
